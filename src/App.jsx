@@ -12,9 +12,9 @@ function App() {
       </div>
       
 
-      <div className="container mt-5 p-5 tabela">
+      <div className="container mt-1 p-3 tabela">
       <table className="table table-striped table-bordered text-center">
-        <caption className="text-center">Índice de Massa Corporal</caption>
+        <caption className="text-center caption-top"><h1>Índice de Massa Corporal</h1></caption>
         <thead>
           <tr>
             <th>IMC</th>

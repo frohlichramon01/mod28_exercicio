@@ -25,7 +25,9 @@ const Calculadora = () => {
             resultado = 'Obesidade III';
         }
 
-        return resultado
+        return (<strong>
+            Resultado: {resultado}
+            </strong>)
         
     }
 
@@ -33,16 +35,27 @@ const Calculadora = () => {
     return (
         
             <form>
-                <div>
-                    <label htmlFor="altura">Altura: </label>
-                    <input id="altura" type="number" min="0" max="3" placeholder="Altura em metros" onBlur={evento => setAltura(parseFloat(evento.target.value))}/>
-                </div>
-                <div>
-                    <label htmlFor="peso">Peso: </label>
-                    <input id="peso" type="number" min="0" max="300" placeholder="Peso em quilogramas" onBlur={evento => setPeso(parseFloat(evento.target.value))}/>
+                <div className="container">
+                    <div className='row justify-content-center'>
+                        <div className="col-3 align-self-center">
+                            <label className='form-label' htmlFor="altura"><strong>Altura:</strong></label>
+                            <input className='form-control text-center' id="altura" type="number" min="0" max="3" placeholder="Altura em metros" onBlur={evento => setAltura(parseFloat(evento.target.value))}/>
+                        </div>
                     </div>
-                {altura > 0 && peso > 0 ? calculaImc() : <p>IMC: </p>}
-                
+                    <div className='row justify-content-center mt-3'>
+                    <div className="col-3 align-self-center">
+                            <label className='form-label' htmlFor="peso"><strong>Peso:</strong></label>
+                            <input className='form-control text-center' id="peso" type="number" min="0" max="300" placeholder="Peso em quilogramas" onBlur={evento => setPeso(parseFloat(evento.target.value))}/>
+                            </div>
+                    </div>
+                </div>
+                <div className="container mb-5">
+                    <p className="mt-5">
+                        <strong>{altura > 0 && peso > 0 ? calculaImc() : <p><strong>IMC:</strong> </p>}</strong>
+                    </p>
+                </div>
+                    
+                    
 
                 
             </form>
