@@ -1,0 +1,8 @@
+:root{
+    --corPrincipal: rgb(20, 0, 134);
+    --corSecundaria: rgb(240,240,240);
+}
+
+.tabela {
+    max-width: 50%;
+}
