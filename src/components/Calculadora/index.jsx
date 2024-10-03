@@ -18,22 +18,21 @@ const Calculadora = () => {
         } else if ((imc >= 24.5 && imc < 30)){
             resultado = 'Acima do peso';
         } else if ((imc >= 30 && imc < 35)){
-            resultado = 'Obesidade I';
+            resultado = 'Obesidade Grau I';
         } else if ((imc >= 35 && imc < 40)){
-            resultado = 'Obesidade II';
+            resultado = 'Obesidade Grau II';
         } else if (imc > 40){
-            resultado = 'Obesidade III';
+            resultado = 'Obesidade Grau III';
         }
 
         return (<strong>
-            Resultado: {resultado}
-            </strong>)
-        
+                Resultado: {resultado}
+                </strong>)
     }
 
 
     return (
-        
+        <>
             <form>
                 <div className="container">
                     <div className='row justify-content-center'>
@@ -54,12 +53,9 @@ const Calculadora = () => {
                         <strong>{altura > 0 && peso > 0 ? calculaImc() : <p><strong>IMC:</strong> </p>}</strong>
                     </p>
                 </div>
-                    
-                    
-
-                
             </form>
-       
+            
+       </>
     )
 }
 
